@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <script src="./node_modules/jquery/dist/jquery.js"></script>
+</head>
+
+<body>
+  <div id="selectContainer" class="container p-4">
+
+
+    <!-- <select class="form-select" aria-label="Default select example">
+      <option selected id="defaultSelected" value="Please_select_Country">Please select Country</option>
+      <option value="1">India</option>
+      <option value="2">UK</option>
+      <option value="3">America</option>
+      <option value="4">Europe</option>
+      <option value="5">SouthAfrica</option>
+    </select> -->
+
+    <!-- <div class="container m-3" id="allContriesdiv">
+      <label class="1">India</label>
+      <label class="2">UK</label>
+      <label class="3">America</label>
+      <label class="4">Europe</label>
+      <label class="5">SouthAfrica</label>
+    </div> -->
+    <div class="container m-3" id="allContriesdiv2">
+
+    </div>
+</body>
+<script>
+  $(document).ready(
+
+    function ExeqJquery() {
+      alert("JQUER SCRIPT LOADED")
+
+
+
+      let countriesLIST = [
+        { name: "India" },
+        { name: "UK" },
+        { name: "America" },
+        { name: "Europe" },
+        { name: "SouthAfrica" }
+      ]
+
+
+
+
+
+      // console.log(countriesLIST[1].name)
+
+
+      // console.log(element)
+      $("#selectContainer").html(
+
+        `<select class="form-select" aria-label="Default select example">
+          <option selected id ="defaultSelected" value = "Please_select_Country">Please select Country</option >`
+        +
+        countriesLIST.forEach(element => {
+          <option>${element.name}</option>
+        })
+        +
+        `</select > `
+      )
+
+
+      // for (val in countriesLIST) {
+      // console.log(countriesLIST[val].name)
+
+      // }
+
+      // // for (val in countriesLIST) { // console.log(countriesLIST[val].name)
+      // countriesLIST[val].forEach(element => {
+
+      //   $("#selectContainer").html(
+      //     `<select class="form-select" aria-label="Default select example">
+      //    <option selected id ="defaultSelected" value = "Please_select_Country">Please select Country</option >
+      //    <option>${element.name}</option>
+      //    </select > `
+      //   )
+
+      // })
+
+
+
+
+      // <option value="2">UK</option>
+      //           <option value="3">America</option>
+      //           <option value="4">Europe</option>
+      //           <option value="5">SouthAfrica</option>
+
+
+      // $("select").click(
+      //   function () {
+      //     var X = $("select").val()
+      //     if (X == "Please_select_Country") {
+      //       $("label").show()
+      //     }
+      //     else if (X != "Please_select_Country") {
+      //       $("label").css("display", "none")
+      //       $("." + X).text(X)
+      //       $("." + X).css("display", "block")
+      //     }
+      //   }
+      // )
+
+    }
+  )
+</script>
+
+</html>
